@@ -412,7 +412,13 @@ ORDER BY
 * Muestra las piezas antiguas que han recibido la mayor cantidad de visitas o consultas por parte de los usuarios.
 
 ```sql
-
+SELECT 
+    a.name_antique AS 'Nombre de la Pieza',
+    a.search_antique AS 'Cantidad de Consultas'
+FROM 
+    antique a
+ORDER BY 
+    a.search_antique DESC;
 ```
 
 * Obtén una lista de todas las piezas antiguas que se han vendido dentro de un rango de fechas específico, incluyendo la información del vendedor y comprador.
